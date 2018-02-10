@@ -22,6 +22,7 @@ module.exports = function(config) {
       'src/mainController.js',
       'src/secondController.js',
       'src/greetingService.js',
+      'src/dataService.js',
       {pattern: 'src/**/*.js'},
       {pattern: 'mini.html', watched: false},
       'test/**/*.js'
