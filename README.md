@@ -1,0 +1,1 @@
+##Some karma tests for a most basic Angular application 
