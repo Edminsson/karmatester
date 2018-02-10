@@ -38,5 +38,27 @@ namespace Tester {
     
         })
 
+        describe('Injecting provide', () => {
+            it('...in here', ()=> {
+                let testTjanst:any;
+                angular.mock.module(($provide:any) => {
+                    $provide.service('testService', ()=>{
+                        return {
+                            testString: 'testar'
+                        }
+                    })
+                });
+                angular.mock.inject((testService:any) => {
+                    testTjanst = testService;
+                });
+
+                expect(testTjanst.testString).toEqual("testar");
+
+            })
+  
+        })
+
+
+
     })
 }

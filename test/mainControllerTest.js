@@ -35,5 +35,21 @@ var Tester;
                 expect($scope.nameWithGreeting).toEqual("hola Main");
             });
         });
+        describe('Injecting provide', function () {
+            it('...in here', function () {
+                var testTjanst;
+                angular.mock.module(function ($provide) {
+                    $provide.service('testService', function () {
+                        return {
+                            testString: 'testar'
+                        };
+                    });
+                });
+                angular.mock.inject(function (testService) {
+                    testTjanst = testService;
+                });
+                expect(testTjanst.testString).toEqual("testar");
+            });
+        });
     });
 })(Tester || (Tester = {}));
