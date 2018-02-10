@@ -5,3 +5,5 @@
 - in bodytests.ts you can find a simple asynchronous test.
 
 - the rest of the test files are angular test with injection and mocking of services.
+
+Se även https://github.com/Edminsson/AngularKarmaTesting
